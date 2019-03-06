@@ -2,13 +2,15 @@
 /*
  _______________________________________________________
 |                                                       |
-| Name: ProStats 1.9.7.1                                  |
+| Name: ProStats 1.9.7.1                                |
 | Type: MyBB Plugin                                     |
 | Author: SaeedGh (SaeehGhMail@Gmail.com)               |
 | Author2: AliReza Tofighi (http://my-bb.ir)            |
+| Quick simple edits for php 7.2 pkged by vintagedaddyo |
 | Support: http://prostats.wordpress.com/support/       |
-| Last edit: Dec 25, 2018                               |
+| Last edit: March 04, 2019                             |
 |_______________________________________________________|
+
 Information of this version:
 https://community.mybb.com/thread-220378-post-1320892.html#pid1320892
 
@@ -1004,7 +1006,7 @@ EOT
 
  $templatearray = array(
  'title' => "prostats_newestposts_latest_posts",
- 'template' => $db->escape_string('<td>{$readstate_icon}<a href="{$threadlink}" title="{$subject_long}">{$subject}</a></td>'),
+ 'template' => $db->escape_string('<td>{$readstate_icon}<a href="{$threadlink}" title="{$subject_long}">{$subject} ({$newest_threads[\'replies\']})</a></td>'),
  'sid' => "-1"
  );
  $db->insert_query("templates", $templatearray);
