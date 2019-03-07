@@ -34,7 +34,7 @@ function prostats_g()
 {
  global $mybb;
 
- $mybb->psga['prostats_version'] = '1.9.7';
+ $mybb->psga['prostats_version'] = '1.9.7.1';
  $mybb->psga['update_popup_link'] = 'https://docs.google.com/uc?export=view&id=0B1io8D4cQytcemFVVFh3VXJzdWs';
  $mybb->psga['surprise_link'] = 'https://docs.google.com/uc?export=view&id=0B1io8D4cQytcV0dPSTBYTTFNN00';
 }
@@ -1006,7 +1006,7 @@ EOT
 
  $templatearray = array(
  'title' => "prostats_newestposts_latest_posts",
- 'template' => $db->escape_string('<td>{$readstate_icon}<a href="{$threadlink}" title="{$subject_long}">{$subject}</a></td>'),
+ 'template' => $db->escape_string('<td>{$readstate_icon}<a href="{$threadlink}" title="{$subject_long}">{$subject} ({$newest_threads[\'replies\']})</a></td>'),
  'sid' => "-1"
  );
  $db->insert_query("templates", $templatearray);
