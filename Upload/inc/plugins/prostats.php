@@ -312,7 +312,7 @@ function prostats_install()
  'title' => "Date and Time format",
  'description' => "The format of Date and Time which would be used in stats. [<a href=\"http://php.net/manual/en/function.date.php\" target=\"_blank\">More Information</a>]",
  'optionscode' => "text",
- 'value' => ps_SetSettingsValue('ps_date_format', 'm-d, H:i'),
+ 'value' => ps_SetSettingsValue('ps_date_format', 'M-d, h:i'),
  'disporder' => 42,
  'gid' => $gid
  );
