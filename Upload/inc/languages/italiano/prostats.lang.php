@@ -1,6 +1,6 @@
 <?php
 /**
- * ProStats Plugin - English language
+ * ProStats Plugin - Italiano language
  */
 
 $l['prostats_prostats'] = 'Forum stats';

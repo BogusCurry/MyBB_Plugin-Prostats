@@ -30,7 +30,7 @@ $l['prostats_replies'] = 'Respuestas';
 $l['prostats_views'] = 'Puntos de vista';
 $l['prostats_subject'] = 'Titulo';
 
-$l['prostats_err_thxplugin'] = 'Instale el complemento <a href="http://prostats.wordpress.com/support/"> Gracias </a>.';
+$l['prostats_err_thxplugin'] = 'Instale el complemento <a href="http://prostats.wordpress.com/support/">Gracias</a>.';
 $l['prostats_err_undefind'] = 'Undefind';
 
 $l['prostats_disabled'] = 'No puede usar la funcionalidad de prostats ya que ha sido desactivada por el Administrador.';
