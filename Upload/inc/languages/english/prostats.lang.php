@@ -34,3 +34,5 @@ $l['prostats_err_thxplugin'] = 'Please install the <a href="http://prostats.word
 $l['prostats_err_undefind'] = 'Undefind';
 
 $l['prostats_disabled'] = 'You cannot use the prostats functionality as it has been disabled by the Administrator.';
+
+?>

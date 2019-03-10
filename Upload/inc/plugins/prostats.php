@@ -53,7 +53,9 @@ $plugins->add_hook('admin_config_plugins_activate_commit', 'prostats_install_red
 
 function prostats_info()
 {
- global $mybb, $db;
+ global $mybb, $db, $lang;
+
+ $lang->load("prostats");
 
  $settings_link = '';
 
@@ -61,23 +63,30 @@ function prostats_info()
 
  if ($db->num_rows($query))
  {
- $settings_link = '(<a href="index.php?module=config&action=change&search=prostats" style="color:#FF1493;">Settings</a>)';
+ $settings_link = $lang->pstats_settings_link;
  }
 
  prostats_g();
 
- //DO NOT EDIT/TRANSLATE THIS SECTION
- return array(
- 'name' => '<img border="0" src="../images/prostats/prostats.png" align="absbottom" /> ProStats <span style="color:#000;">/proʊˈstæts/</span>',
- 'description' => 'Professional stats for MyBB. ' . $settings_link,
- 'website' => 'http://prostats.wordpress.com',
- 'author' => '<a href="mailto:SaeedGhMail@Gmail.com">SaeedGh</a> and <a href="http://my-bb.ir">AliReza Tofighi</a> updated by <a href="http://community.mybb.com/user-6029.html">vintagedadyo</a>',
- 'authorsite' => '',
- 'version' => $mybb->psga['prostats_version'], //*** ALSO IN THE SETTING "ps_version" ***
- 'guid' => '124b68d05dcdaf6b7971050baddf340f',
- 'compatibility' => '18*'
- );
+    $lang->pstats_PDesc = ''.$settings_link.'<form action="https://www.paypal.com/cgi-bin/webscr" method="post" style="float:right;">' .
+        '<input type="hidden" name="cmd" value="_s-xclick">' .
+        '<input type="hidden" name="hosted_button_id" value="AZE6ZNZPBPVUL">' .
+        '<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">' .
+        '<img alt="" border="0" src="https://www.paypalobjects.com/pl_PL/i/scr/pixel.gif" width="1" height="1">' .
+        '</form>' . $lang->pstats_PDesc;
+
+    return array(
+        'name' => $lang->pstats_PName,
+        'description' => $lang->pstats_PDesc,
+        'website' => $lang->pstats_PWeb,
+        'author' => $lang->pstats_PAuth,
+        'authorsite' => $lang->pstats_PAuthSite,
+        'version' => $mybb->psga['prostats_version'], //*** ALSO IN THE SETTING 
+        'compatibility' => $lang->pstats_PCompat
+    );
 }
+
+ 
 
 function prostats_is_installed()
 {
