@@ -32,9 +32,11 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 function prostats_g()
 {
- global $mybb;
+ global $mybb, $lang;
 
- $mybb->psga['prostats_version'] = '1.9.7.1';
+ $lang->load("prostats");
+ 
+ $mybb->psga['prostats_version'] = ''.$lang->pstats_PVer.'';
  $mybb->psga['update_popup_link'] = 'https://docs.google.com/uc?export=view&id=0B1io8D4cQytcemFVVFh3VXJzdWs';
  $mybb->psga['surprise_link'] = 'https://docs.google.com/uc?export=view&id=0B1io8D4cQytcV0dPSTBYTTFNN00';
 }
@@ -104,9 +106,11 @@ function prostats_is_installed()
 
 function prostats_install()
 {
- global $mybb, $db;
+ global $mybb, $db, $lang;
 
- $extra_cells = "select\n0=--\n1=Most replies\n2=Most reputations\n3=Most thanks\n4=Most viewed\n5=New members\n6=Top downloads\n7=Top posters\n9=Top Thread Posters\n8=Top referrers";
+ $lang->load("prostats");
+ 
+ $extra_cells = "select\n0=--\n1=".$lang->pstats_extra_cells_1."\n2=".$lang->pstats_extra_cells_2."\n3=".$lang->pstats_extra_cells_3."\n4=".$lang->pstats_extra_cells_4."\n5=".$lang->pstats_extra_cells_5."\n6=".$lang->pstats_extra_cells_6."\n7=".$lang->pstats_extra_cells_7."\n9=".$lang->pstats_extra_cells_9."\n8=".$lang->pstats_extra_cells_8."";
 
  prostats_uninstall();
 
@@ -114,8 +118,8 @@ function prostats_install()
 
  $ps_group = array(
  'name' => "prostats",
- 'title' => "ProStats",
- 'description' => "Professional stats for MyBB.",
+ 'title' => $lang->pstats_setting_group_title,
+ 'description' => $lang->pstats_setting_group_description,
  'disporder' => 1,
  'isdefault' => 1
  );
@@ -125,8 +129,8 @@ function prostats_install()
 
  $ps[]= array(
  'name' => "ps_enable",
- 'title' => "Enable",
- 'description' => "Do you want to enable the plugin?
+ 'title' => $lang->pstats_setting_1_title,
+ 'description' => "".$lang->pstats_setting_1_description."
  <style type=\"text/css\">
  #row_setting_ps_enable td.first,
  #row_setting_ps_position td.first,
@@ -217,8 +221,8 @@ function prostats_install()
  
  $ps[]= array(
  'name' => "ps_index",
- 'title' => "Show in index",
- 'description' => "Show the ProStats table in the index page.",
+ 'title' => $lang->pstats_setting_2_title,
+ 'description' => $lang->pstats_setting_2_description,
  'optionscode' => "yesno",
  'value' => ps_SetSettingsValue('ps_index', '1'),
  'disporder' => 3,
@@ -227,8 +231,8 @@ function prostats_install()
  
  $ps[]= array(
  'name' => "ps_portal",
- 'title' => "Show in portal",
- 'description' => "Show the ProStats table in the portal page.",
+ 'title' => $lang->pstats_setting_3_title,
+ 'description' => $lang->pstats_setting_3_description,
  'optionscode' => "yesno",
  'value' => ps_SetSettingsValue('ps_portal', '0'),
  'disporder' => 4,
@@ -237,8 +241,8 @@ function prostats_install()
  
  $ps[]= array(
  'name' => "ps_global_tag",
- 'title' => "Activate global tag",
- 'description' => "So you can edit themes and insert &lt;ProStats&gt; tag wherever you want to show the stats.",
+ 'title' => $lang->pstats_setting_4_title,
+ 'description' => $lang->pstats_setting_4_description,
  'optionscode' => "yesno",
  'value' => ps_SetSettingsValue('ps_global_tag', '0'),
  'disporder' => 5,
@@ -247,8 +251,8 @@ function prostats_install()
  
  $ps[]= array(
  'name' => "ps_hidefrombots",
- 'title' => "Hide from search bots",
- 'description' => "Using this option you can hide stats from all search bots you\'ve defined them in <strong><a href=\"index.php?module=config-spiders\" target=\"_blank\">Spiders/Bots</a></strong> page. This will save bandwidth and decrease server load.",
+ 'title' => $lang->pstats_setting_5_title,
+ 'description' => $lang->pstats_setting_5_description,
  'optionscode' => "yesno",
  'value' => ps_SetSettingsValue('ps_hidefrombots', '1'),
  'disporder' => 6,
@@ -257,8 +261,8 @@ function prostats_install()
  
  $ps[]= array(
  'name' => "ps_ignoreforums",
- 'title' => "Ignore list",
- 'description' => "Forums not to be shown on ProStats. To select multiple items hold down the Ctrl key, and click each of the items. To deselect items hold down the Ctrl key and click on them.",
+ 'title' => $lang->pstats_setting_6_title,
+ 'description' => $lang->pstats_setting_6_description,
  'optionscode' => "forumselect",
  'value' => ps_SetSettingsValue('ps_ignoreforums', ''),
  'disporder' => 7,
@@ -267,9 +271,9 @@ function prostats_install()
  
  $ps[]= array(
  'name' => "ps_position",
- 'title' => "Table position in index and portal",
- 'description' => "Position of stats in index and portal pages.",
- 'optionscode' => "select\n0=Top (Header)\n1=Bottom (Footer)",
+ 'title' => $lang->pstats_setting_7_title,
+ 'description' => $lang->pstats_setting_7_description,
+ 'optionscode' => "select\n0=".$lang->pstats_setting_7_option_1."\n1=".$lang->pstats_setting_7_option_2."",
  'value' => ps_SetSettingsValue('ps_position', '1'),
  'disporder' => 10,
  'gid' => $gid
@@ -277,8 +281,8 @@ function prostats_install()
  
  $ps[]= array(
  'name' => "ps_format_name",
- 'title' => "Style usernames",
- 'description' => "Style the username in true color, font, etc.",
+ 'title' => $lang->pstats_setting_8_title,
+ 'description' => $lang->pstats_setting_8_description,
  'optionscode' => "yesno",
  'value' => ps_SetSettingsValue('ps_format_name', '1'),
  'disporder' => 20,
@@ -287,9 +291,8 @@ function prostats_install()
 
  $ps[]= array(
  'name' => "ps_highlight",
- 'title' => "Highlighting System",
- 'description' => "Highlight soft-deleted threads, unapproved threads, and threads which are posted in forums moderated by current user.<br />
- Color scheme: <span style=\"background-color:#E8DEFF;\">Deleted</span>, <span style=\"background-color:#FFDDE0;\">Unapproved</span>, <span style=\"background-color:#FFFE92;\">In moderation zone</span>, <span style=\"background-color:#FFDA91;\">Unapproved & In moderation zone</span> ",
+ 'title' => $lang->pstats_setting_9_title,
+ 'description' => $lang->pstats_setting_9_description,
  'optionscode' => "yesno",
  'value' => ps_SetSettingsValue('ps_highlight', '1'),
  'disporder' => 25,
@@ -298,8 +301,8 @@ function prostats_install()
  
  $ps[]= array(
  'name' => "ps_subject_length",
- 'title' => "Subject length",
- 'description' => "Maximum length of topic/post subjects. (Input 0 to remove the limitation)",
+ 'title' => $lang->pstats_setting_10_title,
+ 'description' => $lang->pstats_setting_10_description,
  'optionscode' => "text",
  'value' => ps_SetSettingsValue('ps_subject_length', '25'),
  'disporder' => 30,
@@ -308,8 +311,8 @@ function prostats_install()
  
  $ps[]= array(
  'name' => "ps_num_rows",
- 'title' => "Number of rows",
- 'description' => "How much items must be shown? Input an <strong style=\"color:red;\">odd</strong> number greater than or equal to 3.",
+ 'title' => $lang->pstats_setting_11_title,
+ 'description' => $lang->pstats_setting_11_description,
  'optionscode' => "text",
  'value' => ps_SetSettingsValue('ps_num_rows', '11'),
  'disporder' => 41,
@@ -318,8 +321,8 @@ function prostats_install()
  
  $ps[]= array(
  'name' => "ps_date_format",
- 'title' => "Date and Time format",
- 'description' => "The format of Date and Time which would be used in stats. [<a href=\"http://php.net/manual/en/function.date.php\" target=\"_blank\">More Information</a>]",
+ 'title' => $lang->pstats_setting_12_title,
+ 'description' => $lang->pstats_setting_12_description,
  'optionscode' => "text",
  'value' => ps_SetSettingsValue('ps_date_format', 'M-d, h:i'),
  'disporder' => 42,
@@ -328,8 +331,8 @@ function prostats_install()
  
  $ps[]= array(
  'name' => "ps_date_format_ty",
- 'title' => "Date and Time variable part",
- 'description' => "A part of Date and Time format that must be replaced with \"Yesterday\" or \"Today\".",
+ 'title' => $lang->pstats_setting_13_title,
+ 'description' => $lang->pstats_setting_13_description,
  'optionscode' => "text",
  'value' => ps_SetSettingsValue('ps_date_format_ty', 'm-d'),
  'disporder' => 43,
@@ -338,8 +341,8 @@ function prostats_install()
  
  $ps[]= array(
  'name' => "ps_trow_message",
- 'title' => "Message block",
- 'description' => "This is a block on top/bottom of the ProStats table that you can put your HTML contents in it. Leave it empty to hide it.",
+ 'title' => $lang->pstats_setting_14_title,
+ 'description' => $lang->pstats_setting_14_description,
  'optionscode' => "textarea",
  'value' => ps_SetSettingsValue('ps_trow_message', ''),
  'disporder' => 45,
@@ -348,9 +351,9 @@ function prostats_install()
  
  $ps[]= array(
  'name' => "ps_trow_message_pos",
- 'title' => "Message block position",
- 'description' => "The position of message block in the ProStats table.",
- 'optionscode' => "select\n0=Top\n1=Down (Default)",
+ 'title' => $lang->pstats_setting_15_title,
+ 'description' => $lang->pstats_setting_15_description,
+ 'optionscode' => "select\n0=".$lang->pstats_setting_15_option_1."\n1=".$lang->pstats_setting_15_option_2."",
  'value' => ps_SetSettingsValue('ps_trow_message_pos', '1'),
  'disporder' => 46,
  'gid' => $gid
@@ -358,8 +361,8 @@ function prostats_install()
  
  $ps[]= array(
  'name' => "ps_latest_posts",
- 'title' => "Show latest posts",
- 'description' => "Show latest posts in the ProStats table.",
+ 'title' => $lang->pstats_setting_16_title,
+ 'description' => $lang->pstats_setting_16_description,
  'optionscode' => "yesno",
  'value' => ps_SetSettingsValue('ps_latest_posts', '1'),
  'disporder' => 50,
@@ -368,8 +371,8 @@ function prostats_install()
  
  $ps[]= array(
  'name' => "ps_latest_posts_prefix",
- 'title' => "Show prefix for latest posts",
- 'description' => "Show prefixes in subject of latest posts (if there are any).",
+ 'title' => $lang->pstats_setting_17_title,
+ 'description' => $lang->pstats_setting_17_description,
  'optionscode' => "yesno",
  'value' => ps_SetSettingsValue('ps_latest_posts_prefix', '1'),
  'disporder' => 52,
@@ -378,19 +381,19 @@ function prostats_install()
  
  $ps[]= array(
  'name' => "ps_latest_posts_cells",
- 'title' => "Stats of latest posts",
- 'description' => "What type of stats you want to be shown for latest posts?<br />Your choices are: <strong>Latest_posts, Date, Starter, Last_sender, Forum</strong><br />Separate them by comma (\",\").",
+ 'title' => $lang->pstats_setting_18_title,
+ 'description' => $lang->pstats_setting_18_description,
  'optionscode' => "text",
- 'value' => ps_SetSettingsValue('ps_latest_posts_cells', 'Latest_posts, Date, Starter, Last_sender, Forum'),
+ 'value' => ps_SetSettingsValue('ps_latest_posts_cells', ''.$lang->pstats_setting_18_options_value.''),
  'disporder' => 55,
  'gid' => $gid
  );
  
  $ps[]= array(
  'name' => "ps_latest_posts_pos",
- 'title' => "Latest posts position",
- 'description' => "The position of the Latest posts block.",
- 'optionscode' => "select\n0=Left\n1=Right",
+ 'title' => $lang->pstats_setting_19_title,
+ 'description' => $lang->pstats_setting_19_description,
+ 'optionscode' => "select\n0=".$lang->pstats_setting_19_option_1."\n1=".$lang->pstats_setting_19_option_2."",
  'value' => ps_SetSettingsValue('ps_latest_posts_pos', '0'),
  'disporder' => 60,
  'gid' => $gid
@@ -398,8 +401,8 @@ function prostats_install()
  
  $ps[]= array(
  'name' => "ps_cell_1",
- 'title' => "Extra cell 1 (Top-Left)",
- 'description' => "<div class=\"ec_div\"><img style=\"float:left;\" src=\"../images/prostats/ps_cells.gif\" /><img style=\"float:left;margin-top:-178px;margin-left:-28px;\" src=\"../images/prostats/ps_cells.gif\" /></div>",
+ 'title' => $lang->pstats_setting_20_title,
+ 'description' => $lang->pstats_setting_20_description,
  'optionscode' => $extra_cells,
  'value' => ps_SetSettingsValue('ps_cell_1', '4'),
  'disporder' => 62,
@@ -408,8 +411,8 @@ function prostats_install()
  
  $ps[]= array(
  'name' => "ps_cell_2",
- 'title' => "Extra cell 2 (Bottom-Left)",
- 'description' => "<div class=\"ec_div\"><img style=\"float:left;\" src=\"../images/prostats/ps_cells.gif\" /><img style=\"float:left;margin-top:-159px;margin-left:-28px;\" src=\"../images/prostats/ps_cells.gif\" /></div>",
+ 'title' => $lang->pstats_setting_21_title,
+ 'description' => $lang->pstats_setting_21_description,
  'optionscode' => $extra_cells,
  'value' => ps_SetSettingsValue('ps_cell_2', '2'),
  'disporder' => 64,
@@ -418,8 +421,8 @@ function prostats_install()
  
  $ps[]= array(
  'name' => "ps_cell_3",
- 'title' => "Extra cell 3 (Top-Middle)",
- 'description' => "<div class=\"ec_div\"><img style=\"float:left;\" src=\"../images/prostats/ps_cells.gif\" /><img style=\"float:left;margin-top:-178px;margin-left:-14px;\" src=\"../images/prostats/ps_cells.gif\" /></div>",
+ 'title' => $lang->pstats_setting_22_title,
+ 'description' => $lang->pstats_setting_22_description,
  'optionscode' => $extra_cells,
  'value' => ps_SetSettingsValue('ps_cell_3', '1'),
  'disporder' => 66,
@@ -428,8 +431,8 @@ function prostats_install()
  
  $ps[]= array(
  'name' => "ps_cell_4",
- 'title' => "Extra cell 4 (Bottom-Middle)",
- 'description' => "<div class=\"ec_div\"><img style=\"float:left;\" src=\"../images/prostats/ps_cells.gif\" /><img style=\"float:left;margin-top:-159px;margin-left:-14px;\" src=\"../images/prostats/ps_cells.gif\" /></div>",
+ 'title' => $lang->pstats_setting_23_title,
+ 'description' => $lang->pstats_setting_23_description,
  'optionscode' => $extra_cells,
  'value' => ps_SetSettingsValue('ps_cell_4', '7'),
  'disporder' => 68,
@@ -438,8 +441,8 @@ function prostats_install()
  
  $ps[]= array(
  'name' => "ps_cell_5",
- 'title' => "Extra cell 5 (Top-Right)",
- 'description' => "<div class=\"ec_div\"><img style=\"float:left;\" src=\"../images/prostats/ps_cells.gif\" /><img style=\"float:left;margin-top:-178px;margin-left:0px;\" src=\"../images/prostats/ps_cells.gif\" /></div>",
+ 'title' => $lang->pstats_setting_24_title,
+ 'description' => $lang->pstats_setting_24_description,
  'optionscode' => $extra_cells,
  'value' => ps_SetSettingsValue('ps_cell_5', '3'),
  'disporder' => 70,
@@ -448,8 +451,8 @@ function prostats_install()
  
  $ps[]= array(
  'name' => "ps_cell_6",
- 'title' => "Extra cell 6 (Bottom-Right)",
- 'description' => "<div class=\"ec_div\"><img style=\"float:left;\" src=\"../images/prostats/ps_cells.gif\" /><img style=\"float:left;margin-top:-159px;margin-left:0px;\" src=\"../images/prostats/ps_cells.gif\" /></div>",
+ 'title' => $lang->pstats_setting_25_title,
+ 'description' => $lang->pstats_setting_25_description,
  'optionscode' => $extra_cells,
  'value' => ps_SetSettingsValue('ps_cell_6', '5'),
  'disporder' => 72,
@@ -458,8 +461,8 @@ function prostats_install()
 
  $ps[]= array(
  'name' => "ps_xml_feed",
- 'title' => "Activate XML feed",
- 'description' => "Output the stats in XML format to show on other websites. [<a href=\"http://community.mybb.com/thread-48686.html\" target=\"_blank\">More Information</a>]",
+ 'title' => $lang->pstats_setting_26_title,
+ 'description' => $lang->pstats_setting_26_description,
  'optionscode' => "yesno",
  'value' => ps_SetSettingsValue('ps_xml_feed', '0'),
  'disporder' => 78,
@@ -468,8 +471,8 @@ function prostats_install()
  
  $ps[]= array(
  'name' => "ps_chkupdates",
- 'title' => "Check for updates",
- 'description' => "Turn this setting On and you\'ll be notified whenever a new version released. Notification will be shown above the ProStats\' table and would be visible only to Admins.",
+ 'title' => $lang->pstats_setting_27_title,
+ 'description' => $lang->pstats_setting_27_description,
  'optionscode' => "yesno",
  'value' => ps_SetSettingsValue('ps_chkupdates', '1'),
  'disporder' => 80,
@@ -478,8 +481,8 @@ function prostats_install()
  
  $ps[]= array(
  'name' => "ps_surprise",
- 'title' => "Surprise!",
- 'description' => "This option may add a little fun to your forum sometimes! It would probably happen once or twice a year and only Admins can see the result.",
+ 'title' => $lang->pstats_setting_28_title,
+ 'description' => $lang->pstats_setting_28_description,
  'optionscode' => "yesno",
  'value' => ps_SetSettingsValue('ps_surprise', '1'),
  'disporder' => 85,
@@ -488,8 +491,8 @@ function prostats_install()
  
  $ps[]= array(
  'name' => "ps_version",
- 'title' => "ProStats Version",
- 'description' => "DO NOT MODIFY THIS SETTING",
+ 'title' => $lang->pstats_setting_29_title,
+ 'description' => $lang->pstats_setting_29_description,
  'optionscode' => "text",
  'value' => $mybb->psga['prostats_version'],
  'disporder' => 90,

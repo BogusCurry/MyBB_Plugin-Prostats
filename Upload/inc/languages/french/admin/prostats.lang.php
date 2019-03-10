@@ -17,6 +17,17 @@ $l['pstats_PCompat'] = '18*';
 
 $l['pstats_settings_link'] = '(<a href="index.php?module=config&action=change&search=prostats" style="color:#FF1493;">Settings</a>)<br/>';
 
+// extra_cells
+$l['pstats_extra_cells_1'] = 'Most replies';
+$l['pstats_extra_cells_2'] = 'Most reputations';
+$l['pstats_extra_cells_3'] = 'Most thanks';
+$l['pstats_extra_cells_4'] = 'Most viewed';
+$l['pstats_extra_cells_5'] = 'New members';
+$l['pstats_extra_cells_6'] = 'Top downloads';
+$l['pstats_extra_cells_7'] = 'Top posters';
+$l['pstats_extra_cells_8'] = 'Top referrers';
+$l['pstats_extra_cells_9'] = 'Top Thread Posters';
+
 // setting group
 $l['pstats_setting_group_title'] = 'ProStats';
 $l['pstats_setting_group_description'] = 'Professional stats for MyBB.';
@@ -89,6 +100,9 @@ $l['pstats_setting_14_description'] = 'This is a block on top/bottom of the ProS
 $l['pstats_setting_15_title'] = 'Message block position';
 $l['pstats_setting_15_description'] = 'The position of message block in the ProStats table.';
 
+$l['pstats_setting_15_option_1'] = 'Top';
+$l['pstats_setting_15_option_2'] = 'Down (Default)';
+
 // setting 16
 $l['pstats_setting_16_title'] = 'Show latest posts';
 $l['pstats_setting_16_description'] = 'Show latest posts in the ProStats table.';
@@ -99,15 +113,15 @@ $l['pstats_setting_17_description'] = 'Show prefixes in subject of latest posts 
 
 // setting 18
 $l['pstats_setting_18_title'] = 'Stats of latest posts';
-$l['pstats_setting_8_description'] = "What type of stats you want to be shown for latest posts?<br />Your choices are: <strong>Latest_posts, Date, Starter, Last_sender, Forum</strong><br />Separate them by comma (\",\").";
-$l['pstats_setting_18_value'] = 'Latest_posts, Date, Starter, Last_sender, Forum';
+$l['pstats_setting_18_description'] = "What type of stats you want to be shown for latest posts?<br />Your choices are: <strong>Latest_posts, Date, Starter, Last_sender, Forum</strong><br />Separate them by comma (\",\").";
+$l['pstats_setting_18_options_value'] = "Latest_posts, Date, Starter, Last_sender, Forum";
 
 // setting 19
 $l['pstats_setting_19_title'] = 'Latest posts position';
 $l['pstats_setting_19_description'] = 'The position of the Latest posts block.';
 
-$l['pstats_setting_19_options_1'] = 'Left';
-$l['pstats_setting_19_options_1'] = 'Right';
+$l['pstats_setting_19_option_1'] = 'Left';
+$l['pstats_setting_19_option_2'] = 'Right';
 
 // setting 20
 $l['pstats_setting_20_title'] = 'Extra cell 1 (Top-Left)';
@@ -139,7 +153,7 @@ $l['pstats_setting_26_description'] = "Output the stats in XML format to show on
 
 // setting 27
 $l['pstats_setting_27_title'] = 'Check for updates';
-$l['pstats_setting_27_description'] = 'Turn this setting On and you\'ll be notified whenever a new version released. Notification will be shown above the ProStats\'s table and would be visible only to Admins.';
+$l['pstats_setting_27_description'] = "Turn this setting On and you\'ll be notified whenever a new version released. Notification will be shown above the ProStats\'s table and would be visible only to Admins.";
 
 // setting 28
 $l['pstats_setting_28_title'] = 'Surprise!';
