@@ -3,36 +3,36 @@
  * ProStats Plugin - Italiano language
  */
 
-$l['prostats_prostats'] = 'Forum stats';
-$l['prostats_reload'] = 'Reload';
+$l['prostats_prostats'] = 'Statistiche del forum';
+$l['prostats_reload'] = 'Ricarica';
 
-$l['prostats_username'] = 'Username';
-$l['prostats_posts'] = 'Posts';
-$l['prostats_datetime'] = 'Date, time';
+$l['prostats_username'] = 'Nome utente';
+$l['prostats_posts'] = 'Inviare';
+$l['prostats_datetime'] = 'Data, ora';
 $l['prostats_forum'] = 'Forum';
 
-$l['prostats_latest_posts'] = 'Latest posts';
-$l['prostats_most_replies'] = 'Most replies';
-$l['prostats_most_reputations'] = 'Most reputations';
-$l['prostats_most_thanks'] = 'Most thanks';
-$l['prostats_most_views'] = 'Most views';
-$l['prostats_newest_members'] = 'Newest members';
-$l['prostats_top_downloads'] = 'Top downloads';
-$l['prostats_top_posters'] = 'Top posters';
-$l['prostats_top_thread_posters'] = 'Top thread posters';
-$l['prostats_top_topreferrers'] = 'Top referrers';
+$l['prostats_latest_posts'] = 'Ultimi post';
+$l['prostats_most_replies'] = 'Maggior parte delle risposte';
+$l['prostats_most_reputations'] = 'Alta reputazione';
+$l['prostats_most_thanks'] = 'Grazie mille';
+$l['prostats_most_views'] = 'Viste alte';
+$l['prostats_newest_members'] = 'Nuovi membri';
+$l['prostats_top_downloads'] = 'Scaricare principali';
+$l['prostats_top_posters'] = 'Post Alto';
+$l['prostats_top_thread_posters'] = 'Poster in alto nel thread';
+$l['prostats_top_topreferrers'] = 'Referrer elevato';
 
-$l['prostats_topic'] = 'Topic';
-$l['prostats_author'] = 'Author';
-$l['prostats_last_sender'] = 'Last Sender';
-$l['prostats_replies'] = 'Replies';
+$l['prostats_topic'] = 'Argomento';
+$l['prostats_author'] = 'Autore';
+$l['prostats_last_sender'] = 'Ultimo mittente';
+$l['prostats_replies'] = 'Risposte';
 
-$l['prostats_views'] = 'Views';
-$l['prostats_subject'] = 'Title';
+$l['prostats_views'] = 'Visualizzazioni';
+$l['prostats_subject'] = 'Titolo';
 
-$l['prostats_err_thxplugin'] = 'Please install the <a href="http://prostats.wordpress.com/support/">Thanks</a> plugin.';
+$l['prostats_err_thxplugin'] = 'Installa il <a href="http://prostats.wordpress.com/support/">Grazie</a> plugin.';
 $l['prostats_err_undefind'] = 'Undefind';
 
-$l['prostats_disabled'] = 'You cannot use the prostats functionality as it has been disabled by the Administrator.';
+$l['prostats_disabled'] = 'Non puoi usare la funzionalità di prostats come è stata disabilitata dall\'amministratore.';
 
 ?>
