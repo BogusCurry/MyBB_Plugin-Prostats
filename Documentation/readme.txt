@@ -27,4 +27,10 @@ TO DO:
 
 ** current back-end localization support: still working on it, coming soon!
 
+- english *done
+- englishgb *done
+- espanol * still in English
+- french * still in English
+- italianol * still in English
+
 Works with and intended to be used with: https://community.mybb.com/mods.php?action=view&pid=1127
