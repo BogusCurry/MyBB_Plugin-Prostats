@@ -71,7 +71,7 @@ function prostats_info()
  'name' => '<img border="0" src="../images/prostats/prostats.png" align="absbottom" /> ProStats <span style="color:#000;">/proʊˈstæts/</span>',
  'description' => 'Professional stats for MyBB. ' . $settings_link,
  'website' => 'http://prostats.wordpress.com',
- 'author' => '<a href="mailto:SaeedGhMail@Gmail.com">SaeedGh</a> and <a href="http://my-bb.ir">AliReza Tofighi</a>',
+ 'author' => '<a href="mailto:SaeedGhMail@Gmail.com">SaeedGh</a> and <a href="http://my-bb.ir">AliReza Tofighi</a> updated by <a href="http://community.mybb.com/user-6029.html">vintagedadyo</a>',
  'authorsite' => '',
  'version' => $mybb->psga['prostats_version'], //*** ALSO IN THE SETTING "ps_version" ***
  'guid' => '124b68d05dcdaf6b7971050baddf340f',
