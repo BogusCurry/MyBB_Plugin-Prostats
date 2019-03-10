@@ -10,12 +10,18 @@ $l['pstats_PDesc'] = 'Professional stats for MyBB. ';
 $l['pstats_PWeb'] = 'http://prostats.wordpress.com';
 $l['pstats_PAuth'] = '<a href="mailto:SaeedGhMail@Gmail.com">SaeedGh</a> and <a href="http://my-bb.ir">AliReza Tofighi</a> updated by <a href="http://community.mybb.com/user-6029.html">vintagedadyo</a>';
 $l['pstats_PAuthSite'] = '';
-$l['pstats_PVer'] = '1.9.7.1';
+$l['pstats_PVer'] = '1.9.7.2';
 $l['pstats_PGUID'] = '124b68d05dcdaf6b7971050baddf340f';
 $l['pstats_PCompat'] = '18*';
 
 
 $l['pstats_settings_link'] = '(<a href="index.php?module=config&action=change&search=prostats" style="color:#FF1493;">Settings</a>)<br/>';
+
+
+//float_stats
+
+$l['pstats_float_stats_instant_preview'] = 'Instant Preview';
+
 
 // extra_cells
 $l['pstats_extra_cells_1'] = 'Most replies';

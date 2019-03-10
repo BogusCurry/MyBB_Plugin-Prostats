@@ -208,7 +208,7 @@ function prostats_install()
  
  <div id=\"preview_iframe_holder\">
  <iframe id=\"preview_iframe\" name=\"preview_iframe\" src=\"../floatstats.php?fs_action=preview\" style=\"width:100%;border:0;height:inherit;\"></iframe>
- <div id=\"preview_handle\" class=\"unselectable preview_handle\">Instant Preview</div>
+ <div id=\"preview_handle\" class=\"unselectable preview_handle\">".$lang->pstats_float_stats_instant_preview."</div>
  </div>
  
  <script type=\"text/javascript\" src=\"../floatstats.php?fs_action=js\"></script>
