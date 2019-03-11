@@ -1,7 +1,33 @@
 <?php
-/**
- * ProStats Plugin - English language
- */
+/*
+ _______________________________________________________
+|                                                       |
+| Name: ProStats 1.9.7.2                                |
+| Type: MyBB Plugin                                     |
+| Author: SaeedGh (SaeehGhMail@Gmail.com)               |
+| Author2: AliReza Tofighi (http://my-bb.ir)            |
+| Quick simple edits for php 7.2 pkged by vintagedaddyo |
+| Support: http://prostats.wordpress.com/support/       |
+| Last edit: March 11, 2019                             |
+|_______________________________________________________|
+
+Information of this version:
+https://community.mybb.com/thread-220378-post-1320892.html#pid1320892
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+*/
 
 // Plugin info
 
@@ -17,6 +43,23 @@ $l['pstats_PCompat'] = '18*';
 
 $l['pstats_settings_link'] = '(<a href="index.php?module=config&action=change&search=prostats" style="color:#FF1493;">Reglages</a>)<br/>';
 
+//float_stats
+
+$l['pstats_float_stats_instant_preview'] = 'Apercu instantane';
+
+
+// extra_cells
+$l['pstats_extra_cells_1'] = 'La plupart des reponses';
+$l['pstats_extra_cells_2'] = 'La plupart des reputations';
+$l['pstats_extra_cells_3'] = 'Merci beaucoup';
+$l['pstats_extra_cells_4'] = 'Le plus regarde';
+$l['pstats_extra_cells_5'] = 'Nouveaux membres';
+$l['pstats_extra_cells_6'] = 'Top telechargements';
+$l['pstats_extra_cells_7'] = 'Top affiches';
+$l['pstats_extra_cells_8'] = 'Top referents';
+$l['pstats_extra_cells_9'] = 'Affiches de fils superieurs';
+
+
 // setting group
 $l['pstats_setting_group_title'] = 'ProStats';
 $l['pstats_setting_group_description'] = 'Statistiques professionnelles pour MyBB.';
@@ -26,8 +69,8 @@ $l['pstats_setting_1_title'] = 'Activer';
 $l['pstats_setting_1_description'] = 'Voulez-vous activer le plugin?';
 
 // setting 2
-$l['pstats_setting_2_title'] = 'Afficher sur l\'index';
-$l['pstats_setting_2_description'] = 'Affichez la table ProStats sur la page d\'index.';
+$l['pstats_setting_2_title'] = 'Afficher sur l index';
+$l['pstats_setting_2_description'] = 'Affichez la table ProStats sur la page d index.';
 
 // setting 3
 $l['pstats_setting_3_title'] = 'Montrer sur le portail';
@@ -39,26 +82,26 @@ $l['pstats_setting_4_description'] = 'Ainsi, vous pouvez editer des themes et in
 
 // setting 5
 $l['pstats_setting_5_title'] = 'Masquer des robots de recherche';
-$l['pstats_setting_5_description'] = "En utilisant cette option, vous pouvez masquer les statistiques de tous les robots de recherche que vous avez définis dans <strong><a href=\"index.php?module=config-spiders\" target=\"_blank\">Araignees/Bots</a></strong> page. Cela permettra d'economiser de la bande passante et de reduire la charge du serveur.";
+$l['pstats_setting_5_description'] = "En utilisant cette option, vous pouvez masquer les statistiques de tous les robots de recherche que vous avez définis dans <strong><a href=\"index.php?module=config-spiders\" target=\"_blank\">Araignees/Bots</a></strong> page. Cela permettra d economiser de la bande passante et de reduire la charge du serveur.";
 
 // setting 6
 $l['pstats_setting_6_title'] = 'Ignorer la liste';
 $l['pstats_setting_6_description'] = 'Les forums ne doivent pas etre affiches sur ProStats. Pour selectionner plusieurs elements, maintenez la touche Ctrl enfoncee et cliquez sur chacun des elements. Pour deselectionner des elements, maintenez la touche Ctrl enfoncee et cliquez dessus.';
 
 // setting 7
-$l['pstats_setting_7_title'] = 'Position de la table dans l\'index et le portail';
-$l['pstats_setting_7_description'] = 'Position des statistiques dans les pages d\'index et de portail.';
+$l['pstats_setting_7_title'] = "Position de la table dans l index et le portail";
+$l['pstats_setting_7_description'] = "Position des statistiques dans les pages d index et de portail.";
 
 $l['pstats_setting_7_option_1'] = 'Top (En-tete)';
 $l['pstats_setting_7_option_2'] = 'Bas (pied de page)';
 
 // setting 8
-$l['pstats_setting_8_title'] = 'Noms d\'utilisateur de style';
-$l['pstats_setting_8_description'] = 'Style le nom d\'utilisateur en couleur vraie, police, etc.';
+$l['pstats_setting_8_title'] = "Noms d utilisateur de style";
+$l['pstats_setting_8_description'] = "Style le nom d utilisateur en couleur vraie, police, etc.";
 
 // setting 9
 $l['pstats_setting_9_title'] = 'Systeme de surbrillance';
-$l['pstats_setting_9_description'] = "Mettez en surbrillance les discussions supprimees, les discussions non approuvees et les discussions postees dans les forums moderes par l'utilisateur actuel.<br />
+$l['pstats_setting_9_description'] = "Mettez en surbrillance les discussions supprimees, les discussions non approuvees et les discussions postees dans les forums moderes par l utilisateur actuel.<br />
  Schema de couleur: <span style=\"background-color:#E8DEFF;\">Supprime</span>, <span style=\"background-color:#FFDDE0;\">Non approuve</span>, <span style=\"background-color:#FFFE92;\">En zone de moderation</span>, <span style=\"background-color:#FFDA91;\">Zone de moderation non approuvee et en cours</span> ";
 
 // setting 10
@@ -67,17 +110,17 @@ $l['pstats_setting_10_description'] = 'Longueur maximale du sujet/sujet. (Entrez
 
 // setting 11
 $l['pstats_setting_11_title'] = 'Nombre de rangees';
-$l['pstats_setting_11_description'] = "Combien d'articles doivent être affiches? Entrer un <strong style=\"color:red;\">impaire</strong> nombre superieur ou egal a 3.";
+$l['pstats_setting_11_description'] = "Combien d articles doivent etre affiches? Entrer un <strong style=\"color:red;\">impaire</strong> nombre superieur ou egal a 3.";
 
 // setting 12
 $l['pstats_setting_12_title'] = 'Format de date et heure';
-$l['pstats_setting_12_description'] = "Le format de date et heure qui serait utilise dans les statistiques. [<a href=\"http://php.net/manual/en/function.date.php\" target=\"_blank\">Plus d'information</a>]";
+$l['pstats_setting_12_description'] = "Le format de date et heure qui serait utilise dans les statistiques. [<a href=\"http://php.net/manual/en/function.date.php\" target=\"_blank\">Plus d information</a>]";
 
 $l['pstats_setting_12_value'] = 'M-d, h:i';
 
 // setting 13
 $l['pstats_setting_13_title'] = 'Partie variable date et heure';
-$l['pstats_setting_13_description'] = "Une partie du format de date et heure qui doit etre remplacee par \"Hier\" or \"Aujourd'hui\".";
+$l['pstats_setting_13_description'] = "Une partie du format de date et heure qui doit etre remplacee par \"Hier\" or \"Aujourd hui\".";
 
 $l['pstats_setting_13_value'] = 'm-d';
 
@@ -95,7 +138,7 @@ $l['pstats_setting_16_description'] = 'Afficher les derniers messages dans la ta
 
 // setting 17
 $l['pstats_setting_17_title'] = 'Afficher le prefixe pour les derniers messages';
-$l['pstats_setting_17_description'] = 'Afficher les prefixes dans le sujet des derniers messages (s\'il y en a).';
+$l['pstats_setting_17_description'] = "Afficher les prefixes dans le sujet des derniers messages (s il y en a).";
 
 // setting 18
 $l['pstats_setting_18_title'] = 'Statistiques des derniers messages';
@@ -135,11 +178,11 @@ $l['pstats_setting_25_description'] = "<div class=\"ec_div\"><img style=\"float:
 
 // setting 26
 $l['pstats_setting_26_title'] = 'Activer le flux XML';
-$l['pstats_setting_26_description'] = "Generez les statistiques au format XML a afficher sur d'autres sites Web. [<a href=\"http://community.mybb.com/thread-48686.html\" target=\"_blank\">Plus d'information</a>]";
+$l['pstats_setting_26_description'] = "Generez les statistiques au format XML a afficher sur d autres sites Web. [<a href=\"http://community.mybb.com/thread-48686.html\" target=\"_blank\">Plus d information</a>]";
 
 // setting 27
 $l['pstats_setting_27_title'] = 'erifier les mises a jour';
-$l['pstats_setting_27_description'] = 'Activez ce parametre et vous serez averti chaque fois qu\'une nouvelle version sera publiee. La notification sera affichee au-dessus du tableau des ProStats et ne sera visible que par les administrateurs.';
+$l['pstats_setting_27_description'] = 'Activez ce parametre et vous serez averti chaque fois qu une nouvelle version sera publiee. La notification sera affichee au-dessus du tableau des ProStats et ne sera visible que par les administrateurs.';
 
 // setting 28
 $l['pstats_setting_28_title'] = 'Surprise!';
