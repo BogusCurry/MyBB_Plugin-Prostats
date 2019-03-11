@@ -78,7 +78,7 @@ $l['pstats_setting_3_description'] = 'Affichez la table ProStats sur la page de 
 
 // setting 4
 $l['pstats_setting_4_title'] = 'Activer le tag global';
-$l['pstats_setting_4_description'] = 'Ainsi, vous pouvez editer des themes et insérer &lt;ProStats&gt; taguer ou vous voulez montrer les statistiques.';
+$l['pstats_setting_4_description'] = 'Ainsi, vous pouvez editer des themes et inserer &lt;ProStats&gt; taguer ou vous voulez montrer les statistiques.';
 
 // setting 5
 $l['pstats_setting_5_title'] = 'Masquer des robots de recherche';
@@ -89,8 +89,8 @@ $l['pstats_setting_6_title'] = 'Ignorer la liste';
 $l['pstats_setting_6_description'] = 'Les forums ne doivent pas etre affiches sur ProStats. Pour selectionner plusieurs elements, maintenez la touche Ctrl enfoncee et cliquez sur chacun des elements. Pour deselectionner des elements, maintenez la touche Ctrl enfoncee et cliquez dessus.';
 
 // setting 7
-$l['pstats_setting_7_title'] = "Position de la table dans l index et le portail";
-$l['pstats_setting_7_description'] = "Position des statistiques dans les pages d index et de portail.";
+$l['pstats_setting_7_title'] = 'Position de la table dans l index et le portail';
+$l['pstats_setting_7_description'] = 'Position des statistiques dans les pages d index et de portail.';
 
 $l['pstats_setting_7_option_1'] = 'Top (En-tete)';
 $l['pstats_setting_7_option_2'] = 'Bas (pied de page)';
