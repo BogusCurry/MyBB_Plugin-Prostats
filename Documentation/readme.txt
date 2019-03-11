@@ -30,7 +30,7 @@ TO DO:
 - english *done
 - englishgb *done
 - espanol * done
-- french * still in English
+- french * done
 - italianol * still in English
 
 Works with and intended to be used with: https://community.mybb.com/mods.php?action=view&pid=1127

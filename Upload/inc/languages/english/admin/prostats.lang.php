@@ -172,7 +172,7 @@ $l['pstats_setting_23_title'] = 'Extra cell 4 (Bottom-Middle)';
 $l['pstats_setting_23_description'] = "<div class=\"ec_div\"><img style=\"float:left;\" src=\"../images/prostats/ps_cells.gif\" /><img style=\"float:left;margin-top:-159px;margin-left:-14px;\" src=\"../images/prostats/ps_cells.gif\" /></div>";
 
 // setting 24
-$l['pstats_setting_24_title'] = 'Extra cell 5 (Top-Right)"';
+$l['pstats_setting_24_title'] = 'Extra cell 5 (Top-Right)';
 $l['pstats_setting_24_description'] = "<div class=\"ec_div\"><img style=\"float:left;\" src=\"../images/prostats/ps_cells.gif\" /><img style=\"float:left;margin-top:-178px;margin-left:0px;\" src=\"../images/prostats/ps_cells.gif\" /></div>";
 
 // setting 25
