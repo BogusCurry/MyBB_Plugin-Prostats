@@ -50,15 +50,15 @@ $l['pstats_float_stats_instant_preview'] = 'Vista previa instantanea';
 
 
 // extra_cells
-$l['pstats_extra_cells_1'] = 'Most replies';
-$l['pstats_extra_cells_2'] = 'Most reputations';
-$l['pstats_extra_cells_3'] = 'Most thanks';
-$l['pstats_extra_cells_4'] = 'Most viewed';
-$l['pstats_extra_cells_5'] = 'New members';
-$l['pstats_extra_cells_6'] = 'Top downloads';
-$l['pstats_extra_cells_7'] = 'Top posters';
-$l['pstats_extra_cells_8'] = 'Top referrers';
-$l['pstats_extra_cells_9'] = 'Top Thread Posters';
+$l['pstats_extra_cells_1'] = 'La mayoria de las respuestas';
+$l['pstats_extra_cells_2'] = 'La mayoria de las reputaciones';
+$l['pstats_extra_cells_3'] = 'Muchas gracias';
+$l['pstats_extra_cells_4'] = 'Mas visto';
+$l['pstats_extra_cells_5'] = 'Nuevos miembros';
+$l['pstats_extra_cells_6'] = 'Mejores descargas';
+$l['pstats_extra_cells_7'] = 'Mejores carteles';
+$l['pstats_extra_cells_8'] = 'Los mejores referentes';
+$l['pstats_extra_cells_9'] = 'Posters de hilo superior';
 
 // setting group
 $l['pstats_setting_group_title'] = 'ProStats';
@@ -82,7 +82,7 @@ $l['pstats_setting_4_description'] = 'Asi, puede editar temas e insertar &lt;Pro
 
 // setting 5
 $l['pstats_setting_5_title'] = 'Ocultar de los bots de busqueda';
-$l['pstats_setting_5_description'] = "Using this option you can hide stats from all search bots you\'ve defined them in <strong><a href=\"index.php?module=config-spiders\" target=\"_blank\">Spiders/Bots</a></strong> page. This will save bandwidth and decrease server load.";
+$l['pstats_setting_5_description'] = "Con esta opcion puedes ocultar las estadisticas de todos los bots de busqueda que hayas definido en <strong><a href=\"index.php?module=config-spiders\" target=\"_blank\">Aranas/Bots</a></strong> pagina. Esto ahorrará ancho de banda y disminuira la carga del servidor.";
 
 // setting 6
 $l['pstats_setting_6_title'] = 'Lista de ignorados';
@@ -101,8 +101,8 @@ $l['pstats_setting_8_description'] = 'Estilo el nombre de usuario en color verda
 
 // setting 9
 $l['pstats_setting_9_title'] = 'Sistema de resaltado';
-$l['pstats_setting_9_description'] = "Highlight soft-deleted threads, unapproved threads, and threads which are posted in forums moderated by current user.<br />
- Color scheme: <span style=\"background-color:#E8DEFF;\">Deleted</span>, <span style=\"background-color:#FFDDE0;\">Unapproved</span>, <span style=\"background-color:#FFFE92;\">In moderation zone</span>, <span style=\"background-color:#FFDA91;\">Unapproved & In moderation zone</span> ";
+$l['pstats_setting_9_description'] = "Resalte los hilos eliminados, los hilos no aprobados y los que se publican en los foros moderados por el usuario actual.<br />
+ Esquema de colores: <span style=\"background-color:#E8DEFF;\">Eliminado</span>, <span style=\"background-color:#FFDDE0;\">No aprobado</span>, <span style=\"background-color:#FFFE92;\">En zona de moderación</span>, <span style=\"background-color:#FFDA91;\">Zona no aprobada y en moderacion</span> ";
 
 // setting 10
 $l['pstats_setting_10_title'] = 'Longitud del tema';
@@ -110,11 +110,11 @@ $l['pstats_setting_10_description'] = 'Longitud maxima del tema / post temas. (E
 
 // setting 11
 $l['pstats_setting_11_title'] = 'Numero de filas';
-$l['pstats_setting_11_description'] = "How much items must be shown? Input an <strong style=\"color:red;\">odd</strong> number greater than or equal to 3.";
+$l['pstats_setting_11_description'] = "¿Cuantos articulos se deben mostrar? Ingrese un <strong style=\"color:red;\">impar</strong> numero mayor o igual a 3.";
 
 // setting 12
 $l['pstats_setting_12_title'] = 'Formato de fecha y hora';
-$l['pstats_setting_12_description'] = "The format of Date and Time which would be used in stats. [<a href=\"http://php.net/manual/en/function.date.php\" target=\"_blank\">More Information</a>]";
+$l['pstats_setting_12_description'] = "El formato de Fecha y Hora que se usaria en las estadisticas. [<a href=\"http://php.net/manual/en/function.date.php\" target=\"_blank\">Mas informacion</a>]";
 
 $l['pstats_setting_12_value'] = 'M-d, h:i';
 
@@ -145,7 +145,7 @@ $l['pstats_setting_17_description'] = 'Mostrar prefijos en el tema de las ultima
 
 // setting 18
 $l['pstats_setting_18_title'] = 'Estadisticas de los ultimos mensajes';
-$l['pstats_setting_18_description'] = "What type of stats you want to be shown for latest posts?<br />Your choices are: <strong>Latest_posts, Date, Starter, Last_sender, Forum</strong><br />Separate them by comma (\",\").";
+$l['pstats_setting_18_description'] = "¿Que tipo de estadisticas quieres que se muestren para las ultimas publicaciones?<br />Sus opciones son: <strong>Latest_posts, Date, Starter, Last_sender, Forum</strong><br />Separalos por coma (\",\").";
 $l['pstats_setting_18_options_value'] = "Latest_posts, Date, Starter, Last_sender, Forum";
 
 // setting 19
