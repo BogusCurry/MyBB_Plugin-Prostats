@@ -29,7 +29,7 @@ TO DO:
 
 - english *done
 - englishgb *done
-- espanol * still in English
+- espanol * done
 - french * still in English
 - italianol * still in English
 
