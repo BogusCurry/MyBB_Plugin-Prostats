@@ -36,7 +36,7 @@ $l['pstats_PDesc'] = 'Statistiques professionnelles pour MyBB. ';
 $l['pstats_PWeb'] = 'http://prostats.wordpress.com';
 $l['pstats_PAuth'] = '<a href="mailto:SaeedGhMail@Gmail.com">SaeedGh</a> et <a href="http://my-bb.ir">AliReza Tofighi</a> Mis a jour par <a href="http://community.mybb.com/user-6029.html">vintagedadyo</a>';
 $l['pstats_PAuthSite'] = '';
-$l['pstats_PVer'] = '1.9.7.1';
+$l['pstats_PVer'] = '1.9.7.2';
 $l['pstats_PGUID'] = '124b68d05dcdaf6b7971050baddf340f';
 $l['pstats_PCompat'] = '18*';
 
