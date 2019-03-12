@@ -195,5 +195,11 @@ $l['pstats_setting_28_description'] = 'Cette option peut ajouter un peu de fun a
 $l['pstats_setting_29_title'] = 'Version ProStats';
 $l['pstats_setting_29_description'] = 'NE MODIFIEZ PAS CE CADRE';
 
+// cells switch
+$l['pstats_switch_latest_posts'] = 'Latest_posts';
+$l['pstats_switch_date'] = 'Date';
+$l['pstats_switch_starter'] = 'Starter';
+$l['pstats_switch_last_sender'] = 'Last_sender';
+$l['pstats_switch_forum'] = 'Forum';
 
 ?>

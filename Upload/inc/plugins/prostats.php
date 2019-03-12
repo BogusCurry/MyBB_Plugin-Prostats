@@ -518,7 +518,9 @@ function ps_SetSettingsValue($setting_name, $default_value)
 
 function prostats_activate()
 {
- global $db;
+ global $db, $mybb, $db, $lang;
+
+  $lang->load("prostats");
  
  prostats_deactivate();
  
@@ -528,7 +530,9 @@ function prostats_activate()
  find_replace_templatesets('portal', '#{\$header}(\r?)\n#', "{\$header}\n{\$ps_header_portal}\n");
  find_replace_templatesets('portal', '#{\$footer}(\r?)\n#', "{\$ps_footer_portal}\n{\$footer}\n");
  
- $extra_cells = "select\n0=--\n1=Most replies\n2=Most reputations\n3=Most thanks\n4=Most viewed\n5=New members\n6=Top downloads\n7=Top posters\n9=Top Thread Posters\n8=Top referrers";
+
+$extra_cells = "select\n0=--\n1=".$lang->pstats_extra_cells_1."\n2=".$lang->pstats_extra_cells_2."\n3=".$lang->pstats_extra_cells_3."\n4=".$lang->pstats_extra_cells_4."\n5=".$lang->pstats_extra_cells_5."\n6=".$lang->pstats_extra_cells_6."\n7=".$lang->pstats_extra_cells_7."\n9=".$lang->pstats_extra_cells_9."\n8=".$lang->pstats_extra_cells_8."";
+
 
  $templatearray = array(
  'title' => "prostats",
