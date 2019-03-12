@@ -82,7 +82,7 @@ $l['pstats_setting_4_description'] = 'Ainsi, vous pouvez editer des themes et in
 
 // setting 5
 $l['pstats_setting_5_title'] = 'Masquer des robots de recherche';
-$l['pstats_setting_5_description'] = "En utilisant cette option, vous pouvez masquer les statistiques de tous les robots de recherche que vous avez définis dans <strong><a href=\"index.php?module=config-spiders\" target=\"_blank\">Araignees/Bots</a></strong> page. Cela permettra d economiser de la bande passante et de reduire la charge du serveur.";
+$l['pstats_setting_5_description'] = "En utilisant cette option, vous pouvez masquer les statistiques de tous les robots de recherche que vous avez definis dans <strong><a href=\"index.php?module=config-spiders\" target=\"_blank\">Araignees/Bots</a></strong> page. Cela permettra d economiser de la bande passante et de reduire la charge du serveur.";
 
 // setting 6
 $l['pstats_setting_6_title'] = 'Ignorer la liste';
@@ -132,6 +132,9 @@ $l['pstats_setting_14_description'] = 'Ceci est un bloc en haut/en bas du tablea
 $l['pstats_setting_15_title'] = 'Position du bloc de message';
 $l['pstats_setting_15_description'] = 'La position du bloc de messages dans la table ProStats.';
 
+$l['pstats_setting_15_option_1'] = 'Haut';
+$l['pstats_setting_15_option_2'] = 'Down (par defaut)';
+
 // setting 16
 $l['pstats_setting_16_title'] = 'Afficher les derniers messages';
 $l['pstats_setting_16_description'] = 'Afficher les derniers messages dans la table ProStats.';
@@ -143,14 +146,14 @@ $l['pstats_setting_17_description'] = "Afficher les prefixes dans le sujet des d
 // setting 18
 $l['pstats_setting_18_title'] = 'Statistiques des derniers messages';
 $l['pstats_setting_8_description'] = "Quel type de statistiques souhaitez-vous afficher pour les derniers messages?<br />Vos choix sont: <strong>Latest_posts, Date, Starter, Last_sender, Forum</strong><br />Separez-les par une virgule (\",\").";
-$l['pstats_setting_18_value'] = 'Latest_posts, Date, Starter, Last_sender, Forum';
+$l['pstats_setting_18_options_value'] = 'Latest_posts, Date, Starter, Last_sender, Forum';
 
 // setting 19
 $l['pstats_setting_19_title'] = 'Derniers postes postes';
 $l['pstats_setting_19_description'] = 'La position du bloc Derniers messages.';
 
-$l['pstats_setting_19_options_1'] = 'La gauche';
-$l['pstats_setting_19_options_1'] = 'Droite';
+$l['pstats_setting_19_option_1'] = 'La gauche';
+$l['pstats_setting_19_option_2'] = 'Droite';
 
 // setting 20
 $l['pstats_setting_20_title'] = 'Cellule supplementaire 1 (en haut a gauche)';
