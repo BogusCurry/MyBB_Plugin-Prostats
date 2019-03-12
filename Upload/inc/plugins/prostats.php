@@ -2122,15 +2122,20 @@ function ps_GetTY($format='m-d', $stamp='', $offset='', $ty=1)
  {
  $offset = 0;
  }
- 
- $date = gmdate($format, $stamp + ($offset * 3600));
- 
+
+//$date = gmdate($format, $stamp + ($offset * 3600));
+
+ $date = gmdate($format, $stamp + ((int)$offset * 3600));
+
  if ($format && $ty)
  {
  $stamp = TIME_NOW;
  
- $todaysdate = gmdate($format, $stamp + ($offset * 3600));
- $yesterdaysdate = gmdate($format, ($stamp - 86400) + ($offset * 3600));
+// $todaysdate = gmdate($format, $stamp + ($offset * 3600));
+// $yesterdaysdate = gmdate($format, ($stamp - 86400) + ($offset * 3600));
+ 
+ $todaysdate = gmdate($format, $stamp + ((int)$offset * 3600));
+ $yesterdaysdate = gmdate($format, ($stamp - 86400) + ((int)$offset * 3600));
 
  if ($todaysdate == $date)
  {
